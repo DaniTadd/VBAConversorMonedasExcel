@@ -1,14 +1,23 @@
-<h1>Requerimiento de Usuario del Proyecto VBAConversorMonedasExcel </h1>
+<h1> Conversor de monedas VBA para MS Excel </h1>
+
 <h2>Conversor y graficador de monedas según el tipo de cambio multilateral desarrollado con VBA en MS Excel.</h2>
 
 <h2>Introducción</h2>
 
 <p>
-Este proyecto tiene por objetivo desarrollar habilidades de desarrollo de aplicaciones en código VBA, uso del paradigma de POO, habilidades de escritura y presentación de proyectos.
+Este proyecto tiene por objetivo mejorar habilidades de desarrollo de aplicaciones en código VBA, uso del paradigma de POO, habilidades de escritura y presentación de proyectos.
 También se ensayará la selección de las especificaciones necesarias para un proyecto satisfactorio, el análisis de riesgos de la aplicación y la planificación de pruebas que permitan verificar que la aplicación desarrollada es suficientemente robusta como para ser Publicada.
   
 La confección de un "Conversor de monedas" se suele utilizar en la práctica de distintos lenguajes de programación.
 En este caso, se trata de un proyecto propuesto en el curso "Excel/VBA for creative problem solving, Part 3." Realizado en la plataforma Coursera <sup>TM</sup>
+
+Se agruparán muy brevemente los conceptos de:
+<ul>
+  <li>URS (Requerimientos elaborados por el usuario para la búsqueda de proveedores, servicios y /o proyectos (prediseñados o no).</li>
+  <li>Especificaciones</li>
+  <li>Análisis de Riesgos</li>
+  <li>Testeo QA de la apliación</li>
+</ul>
 </p>
 
 <h2>Objetivo</h2>
