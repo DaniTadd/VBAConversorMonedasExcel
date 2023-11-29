@@ -27,7 +27,7 @@ Se desea desarrollar una aplicación en código VBA para utilizar en Excel que r
 Los datos de "ratio de conversión" de monedas deben ser actualizados diariamente.
 </p>
 
-<h2>Especificaciones</h2>
+<h2>Requerimientos de Usuario</h2>
 
 <ol>
   <li>Debe incluir al menos la conversión entre: peso argentino, dólar estadounidense, euro, libra esterlina, reales, pesos mexicanos, sol, boliviano, guaraní, renminbi, yen y won.</li>
