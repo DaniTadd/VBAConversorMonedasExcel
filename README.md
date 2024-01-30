@@ -40,8 +40,118 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
 
 <h2>Análisis de Riesgos</h2>
 
-<p>Se realizará un breve Análisis de Riesgos para mostrar la </p>
+<p>Se determinará la criticidad de las funcionalidades.</p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Descripción</th>
+    <th>Severidad</th>
+    <th>S</th>
+    <th>Ocurrencia</th>
+    <th>O</th>
+    <th>Detectabilidad</th>
+    <th>D</th>
+    <th>NR</th>
+    <th>P1</th>
+    <th>P2</th>
+    <th>P3</th>
+    <th>P4</th>
+    <th>Funcionalidad Crítica</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Conversión entre divisas.</td>
+    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td></td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td></td>
+    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Conversión entre divisas.</td>
+    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td></td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td></td>
+    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>3</td>
+    <td>Conversión entre divisas.</td>
+    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td></td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td></td>
+    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>4</td>
+    <td>Conversión entre divisas.</td>
+    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td></td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td></td>
+    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>5</td>
+    <td>Conversión entre divisas.</td>
+    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td></td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td></td>
+    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+    <tr>
+    <td>6</td>
+    <td>Conversión entre divisas.</td>
+    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td></td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td></td>
+    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 
+
+  
+</table>
 
 <h2>Testeos</h2>
 
