@@ -41,6 +41,21 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
 <h2>Análisis de Riesgos</h2>
 
 <p>Se determinará la criticidad de las funcionalidades.</p>
+<p>Cada una de los atributos de riesgo tendrá un valor según la criticidad:</p>
+<ul>
+  <li>Severidad: de 1 a 3 se evaluará el nivel de severidad del fallo de la función.</li>
+    <li>Siendo 1 una función cuya falla no impide el funcionamiento de la aplicación. No es una función esencial.</li>
+    <li>Siendo 2 una función cuya falla impide el funcionamiento de alguna o algunas funcionalidades de la aplicación, pero no de la aplicación central. Es una función importante pero no es esencial.</li>
+    <li>Siendo 3 una función cuya falla impide el funcionamiento de la aplicación. Es una función esencial.</li>
+  <li>Probabilidad de Ocurrencia: de 1 a 3 se evaluará el nivel de Probabilidad de ocurrencia del fallo de la función.</li>
+    <li>Siendo 1 una función cuya ocurrencia depende del código. Si el código se ha testeado y documentado correctamente en la etapa de validación, la funcionalidad tiene bajas o nulas probabilidades de ocurrencia.</li>
+    <li>Siendo 2 una función cuya ocurrencia depende de la interacción del usuario con la aplicación, no depende enteramente del código, es "personalizable". El error de uso aumenta la probabilidad de Ocurrencia, deja de ser una función "automática".</li>
+    <li>Siendo 3 una función cuya ocurrencia depende de los parámetros ingresados por el usuario. El resultado de la funcionalidad depende enteramente del usuario.</li>
+  <li>Detectabilidad: de 1 a 3 se evaluará el nivel de Probabilidad de ocurrencia del fallo de la función.</li>
+    <li>Siendo 1 una función cuyo resultado se determina durante la interacción del usuario con el sistema.</li>
+    <li>Siendo 2 una función cuyo resultado no siempre se determina durante la interacción del usuario con el sistema sino que el usuario puede no visualizar el resultado en el momento.</li>
+    <li>Siendo 3 una función cuyo resultado no se determina durante la interacción del usuario con el sistema. El usuario no puede verificar el resultado.</li>
+</ul>
 <table>
   <tr>
     <th>ID</th>
