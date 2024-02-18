@@ -52,16 +52,17 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
   <li>Probabilidad de Ocurrencia: de 1 a 3 se evaluará el nivel de Probabilidad de ocurrencia del fallo de la función.</li>
     <ul>
       <li>Siendo 1 una función cuya ocurrencia depende del código. Si el código se ha testeado y documentado correctamente en la etapa de validación, la funcionalidad tiene bajas o nulas probabilidades de ocurrencia.</li>
-      <li>Siendo 2 una función cuya ocurrencia depende de la interacción del usuario con la aplicación, no depende enteramente del código, es "personalizable". El error de uso aumenta la probabilidad de Ocurrencia, deja de ser una función "automática".</li>
+      <li>Siendo 2 una función cuya ocurrencia depende de la interacción del usuario con la aplicación, no depende enteramente del código, es "parametrizable". El error de uso aumenta la probabilidad de Ocurrencia, deja de ser una función "automática".</li>
       <li>Siendo 3 una función cuya ocurrencia depende de los parámetros ingresados por el usuario. El resultado de la funcionalidad depende enteramente del usuario.</li>
     </ul>
   <li>Detectabilidad: de 1 a 3 se evaluará el nivel de Probabilidad de ocurrencia del fallo de la función.</li>
     <ul>
-      <li>Siendo 1 una función cuyo resultado se determina durante la interacción del usuario con el sistema.</li>
-      <li>Siendo 2 una función cuyo resultado no siempre se determina durante la interacción del usuario con el sistema sino que el usuario puede no visualizar el resultado en el momento.</li>
-      <li>Siendo 3 una función cuyo resultado no se determina durante la interacción del usuario con el sistema. El usuario no puede verificar el resultado.</li>
+      <li>Siendo 1 una función cuyo resultado se basa en una funcionalidad estándar y no se introducen parámentros por el usuario..</li>
+      <li>Siendo 2 una función cuyo resultado se basa en funciones estándar, pero el usuario debe introducir parámetros para lograr el resultado deseado.</li>
+      <li>Siendo 3 una función prácticamente manual, el sistema se limita a guardar los datos ingresados por el usuario.</li>
     </ul>
 </ul>
+
 <table>
   <tr>
     <th>ID</th>
@@ -83,10 +84,10 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
     <td>1</td>
     <td>Conversión entre divisas.</td>
     <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
-    <td></td>
+    <td>3</td>
     <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
-    <td></td>
-    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td>1</td>
+    <td>Detectabilidad baja. La conversión es automática, depende del código de la aplicación.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -96,12 +97,12 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
   </tr>
   <tr>
     <td>2</td>
-    <td>Conversión entre divisas.</td>
-    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td>Realizar gráfico de 30 días de la paridad entre monedas desde una fecha elegida por el usuario.</td>
+    <td>la funcionalidad de graficación no es la función principal.</td>
     <td></td>
     <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
     <td></td>
-    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td>Detectabilidad baja. El cálculo se realiza en forma automática.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -111,8 +112,8 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
   </tr>
     <tr>
     <td>3</td>
-    <td>Conversión entre divisas.</td>
-    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td>Selección de fechas pasadas.</td>
+    <td>Si no se puede realizar la conversión en fechas pasadas la aplicación no sirve para el fin deseado.</td>
     <td></td>
     <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
     <td></td>
@@ -182,12 +183,12 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
     <th>Test</th>
     <th>Descripción</th>
     <th>Resultado esperado</th>
-    <th>Resultado deseado</th>
+    <th>Resultado obtenido.</th>
   </tr>
   <tr>
     <td>1</td>
-    <td></td>
-    <td></td>
+    <td>Realizar 3 conversiones con la aplicación.</td>
+    <td>1) 15 dólaresestadounidenses a pesos argentinos y 1500 pesos argentinos a dólares estadounidenses, 2) 13 euros a libras esterlinas y 13 libras esterlinas a euros, 3) 25 coronas danesas a pesos colombianos, 25 pesos colombianos a coronas danesas.</td>
     <td></td>
     <td></td>
   </tr>
@@ -230,16 +231,6 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
 
   
 </table>
-
-
-
-
-
-
-
-
-
-
 
 
 
