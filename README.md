@@ -55,13 +55,31 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
       <li>Siendo 2 una función cuya ocurrencia depende de la interacción del usuario con la aplicación, no depende enteramente del código, es "parametrizable". El error de uso aumenta la probabilidad de Ocurrencia, deja de ser una función "automática".</li>
       <li>Siendo 3 una función cuya ocurrencia depende de los parámetros ingresados por el usuario. El resultado de la funcionalidad depende enteramente del usuario.</li>
     </ul>
-  <li>Detectabilidad: de 1 a 3 se evaluará el nivel de Probabilidad de ocurrencia del fallo de la función.</li>
+  <li>Detectabilidad: de 1 a 3 se evaluará el nivel de Probabilidad de detección del fallo de la función por parte del usuario final.</li>
     <ul>
-      <li>Siendo 1 una función cuyo resultado se basa en una funcionalidad estándar y no se introducen parámentros por el usuario..</li>
-      <li>Siendo 2 una función cuyo resultado se basa en funciones estándar, pero el usuario debe introducir parámetros para lograr el resultado deseado.</li>
-      <li>Siendo 3 una función prácticamente manual, el sistema se limita a guardar los datos ingresados por el usuario.</li>
+      <li>Siendo Alta para una función prácticamente manual, el sistema se limita a guardar los datos ingresados por el usuario. El usuario puede contrastar el resultado con lo ingresado / esperado.</li>
+      <li>Siendo Media para una función cuyo resultado se basa en funciones estándar, pero el usuario debe introducir parámetros para lograr el resultado deseado.</li>
+      <li>Siendo Baja una función cuyo resultado se basa en una funcionalidad estándar y no se introducen parámetros por el usuario. El cálculo es automático.</li>
     </ul>
 </ul>
+
+<h3>Criterios de clasificación</h3>
+<p>Los valores de "Severidad" y "Ocurrencia" se sumarán y Se determinará una "Clase de riesgo" Baja, Media o Alta de la siguiente manera:</p>
+<p>Según el resultado de la sumatoria:</p>
+<ul>
+  <li>S + O = 2 **Clase 1** </li>
+  <li>S + O = 3 ó 4 **Clase 2**</li>
+  <li>S + O = 5 ó 6 **Clase 3**</li>
+</ul>
+<p>Luego, de acuerdo a la Detectabilidad, se considerará el nivel de riesgo de la siguiente manera:</p>
+<ul>
+  <li>Clase 1: Detectabilidad Alta, Nivel de Riesgo **BAJO"**, Detectabilidad Media, Nivel de Riesgo **MEDIO**, Detectabilidad Baja, Nivel de Riesgo **MEDIO**</li>
+  <li>Clase 2: Detectabilidad Alta, Nivel de Riesgo **MEDIO"**, Detectabilidad Media, Nivel de Riesgo **MEDIO**, Detectabilidad Baja, Nivel de Riesgo **ALTO**</li>
+  <li>Clase 3: Detectabilidad Alta, Nivel de Riesgo **MEDIO"**, Detectabilidad Media, Nivel de Riesgo **ALTO**, Detectabilidad Baja, Nivel de Riesgo **ALTO**</li>
+</ul>
+<p>Todas las funcionalidades cuyo Nivel final de Riesgo resulte Medio o Alto, deberá ser testeada con resultado satisfactorio antes de poder salir al ambiente productivo.</p>
+<p>El análisis de Riesgos y la Clasificación de Riesgos tendrán un sesgo que evalúe la peor situación que se pueda presentar de manera de lograr la mayor certeza de que las funcionalidades necesarias y deseables son testeadas a tiempo.</p>
+<p>Este análisis busca priorizar las funcionalidades, pero el testeo de las mismas puede ser tan extenso y abarcador como se considere necesario según criterios que maximicen la seguridad para los fines del usuario. Pudiéndose optar por testear funcionalidades de Nivel de Riesgo Bajo también.</p>
 
 <table>
   <tr>
@@ -87,8 +105,8 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
     <td>3</td>
     <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
     <td>1</td>
-    <td>Detectabilidad baja. La conversión es automática, depende del código de la aplicación.</td>
-    <td></td>
+    <td>Detectabilidad baja. La conversión es automática, el usuario no tiene acceso ni control sobre los <i>ratios de conversión</i>, depende del código de la aplicación.</td>
+    <td>BAJA</td>
     <td></td>
     <td></td>
     <td></td>
@@ -127,12 +145,12 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
   </tr>
     <tr>
     <td>4</td>
-    <td>Conversión entre divisas.</td>
-    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td>Detección de fecha sin datos.</td>
+    <td>Si no se maneja la posibilidad de falta de datos, la aplicación no serviría para el día en curso.</td>
     <td></td>
-    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
+    <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina. Se debe contemplar en el manejo de errores.</td>
     <td></td>
-    <td>Detectabilidad alta. El resultado es comprobable.</td>
+    <td>Detectabilidad alta. Sin datos, la aplicación no puede continuar dando mensaje de error.</td>
     <td></td>
     <td></td>
     <td></td>
@@ -142,8 +160,8 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
   </tr>
     <tr>
     <td>5</td>
-    <td>Conversión entre divisas.</td>
-    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td>Verificación de ingreso de datos por el usuario.</td>
+    <td>Si los datos ingresados por el usuario no son correctos, la conversión falla o no tiene sentido.</td>
     <td></td>
     <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
     <td></td>
@@ -157,8 +175,8 @@ Los datos de "ratio de conversión" de monedas deben ser actualizados diariament
   </tr>
     <tr>
     <td>6</td>
-    <td>Conversión entre divisas.</td>
-    <td>Si no se puede realizar la conversión correcta, la aplicación no sirve.</td>
+    <td>Creación de múltiples gráficos para comparación de resultados.</td>
+    <td>La falta de gráficos por separado no impide la tarea de los operadores pero puede dificultarla.</td>
     <td></td>
     <td>Si el código funciona correctamente, la probabilidad de ocurrencia se elimina.</td>
     <td></td>
